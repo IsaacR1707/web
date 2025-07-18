@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinos</title>
+    <link rel="stylesheet" href="../../css/estilos.css">
+    <link rel="stylesheet" href="../../css/destinos.css">
+</head>
+<body>
+     <!-- Header y cinta desde index -->
+  <header class="header">
+    <div class="logo">
+      <a href="../index.html">
+        <img src="../../imagenes.img/logo.jpg" alt="Logo Empresa" width="200">
+      </a>
+    </div>
+    <nav class="menu">
+      <a href="NuestrosServicios.html">Nuestros Servicios</a>
+      <a href="Destinos.html">Destinos</a>
+      <a href="Encomiendas.html">Encomiendas</a>
+    </nav>
+  </header>
+
+   <!-- Imagen principal y cinta de búsqueda -->
+  <main>
+    <section class="imagen-principal">
+      <div class="contenedor-imagen">
+        <img id="imagenpa" src="../../imagenes.img/LOGOGRANDEDESTINOS.png" alt="Gran Logo">
+
+         <div class="cinta-opciones">
+         
+        </div>
+      </div>
+      <div id="marcador-cinta" style="height: 1px;"></div>
+    </section>
+  </main>
+
+  <main class="contenedor-destinos">
+    <aside class="filtro-destinos">
+      <div class="buscador">
+        <input type="text" placeholder="Buscar destino">
+        <button><img src="../../imagenes.img/ICONOLUPA.png" alt="Buscar"></button>
+      </div>
+
+      <h3>Servicios</h3>
+      <label><input type="checkbox"> Premier</label>
+      <label><input type="checkbox"> Presidencial</label>
+      <label><input type="checkbox"> Ejecutivo VIP</label>
+      <label><input type="checkbox"> Económico</label>
+
+      <button class="btn-filtrar">Filtrar</button>
+    </aside>
+
+    <section class="grid-destinos">
+      <div class="destino">
+        <img src="../../imagenes.img/coracora.jpg" alt="Barranca">
+        <div class="contenido">
+          <h2>CoraCora</h2>
+          <a href="#" class="btn-servicio">VER DETALLE</a>
+        </div>
+      </div>
+
+      <div class="destino">
+        <img src="../../imagenes.img/huamanga.jpg" alt="Caraz">
+        <div class="contenido">
+          <h2>Huamanga</h2>
+          <a href="#" class="btn-servicio">VER DETALLE</a>
+        </div>
+      </div>
+
+      <div class="destino">
+        <img src="../../imagenes.img/lampa.jpg" alt="Chachapoyas">
+        <div class="contenido">
+          <h2>Lampa</h2>
+          <a href="#" class="btn-servicio">VER DETALLE</a>
+        </div>
+      </div>
+
+      <div class="destino">
+        <img src="../../imagenes.img/puquio.jpg" alt="Cusco">
+        <div class="contenido">
+          <h2>Puquio</h2>
+          <a href="#" class="btn-servicio">VER DETALLE</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Cinta de métodos de pago -->
+<section class="cinta-metodos">
+  <p>Paga tus pasajes con:</p>
+  <div class="logos-pago">
+    <img src="../../imagenes.img/VISA.jpg" alt="Visa">
+    <img src="../../imagenes.img/MASTERCARD.jpg" alt="MasterCard">
+    <img src="../../imagenes.img/YAPE.jpg" alt="Yape">
+    <img src="../../imagenes.img/PLIN.jpg" alt="Plin">
+  </div>
+</section>
+
+
+  <!-- Footer -->
+  <footer>
+    <div class="logo-footer">
+      <img src="../../imagenes.img/logo.jpg" alt="Logo Empresa" width="300" height="100">
+      <p>Derechos reservados &copy; 2025</p>
+    </div>
+  </footer>
+   <script>
+(function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="LGtO9ymXSrsRJKnBXQGCp";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+</script>
+  <!-- JS para cinta flotante -->
+  <script>
+    const cinta = document.querySelector('.cinta-opciones');
+    const marcador = document.getElementById('marcador-cinta');
+    const espacioCinta = document.getElementById('espacio-cinta');
+    let timeoutId;
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+          clearTimeout(timeoutId);
+          cinta.classList.add('fija');
+          espacioCinta.style.height = `${cinta.offsetHeight}px`;
+        } else {
+          timeoutId = setTimeout(() => {
+            cinta.classList.remove('fija');
+            espacioCinta.style.height = '0px';
+          }, 400);
+        }
+      });
+    }, {
+      root: null,
+      threshold: 1
+    });
+
+    observer.observe(marcador);
+  </script>
+    
+    <script>
+  const selector = document.getElementById('pasajeros-btn');
+  const dropdown = document.querySelector('.pasajeros-dropdown');
+
+  selector.addEventListener('click', () => {
+    dropdown.style.display = dropdown.style.display === 'none' ? 'block' : 'none';
+  });
+
+  document.addEventListener('click', function (e) {
+    if (!document.querySelector('.pasajeros-grupo').contains(e.target)) {
+      dropdown.style.display = 'none';
+    }
+  });
+
+  function actualizarContador(tipo, cambio) {
+    const elemento = document.getElementById(tipo);
+    let valor = parseInt(elemento.textContent);
+    valor = Math.max(0, valor + cambio);
+
+    // Limita que siempre haya al menos 1 adulto
+    if (tipo === 'adultos' && valor === 0) return;
+
+    elemento.textContent = valor;
+
+    actualizarResumenPasajeros();
+  }
+
+  function actualizarResumenPasajeros() {
+    const adultos = parseInt(document.getElementById('adultos').textContent);
+    const ninos = parseInt(document.getElementById('ninos').textContent);
+    const bebes = parseInt(document.getElementById('bebes').textContent);
+    const total = adultos + ninos + bebes;
+
+    let label = `${total} pasajero${total > 1 ? 's' : ''}`;
+    selector.textContent = label;
+  }
+
+  // Inicializa
+  actualizarResumenPasajeros();
+</script>
+
+<script>
+  document.querySelector(".formulario-busqueda").addEventListener("submit", function (e) {
+    e.preventDefault(); // Previene envío por defecto del formulario
+
+    const origen = document.getElementById("origen").value;
+    const destino = document.getElementById("destino").value;
+    const fechaSalida = document.getElementById("fecha_salida").value;
+    const adultos = parseInt(document.getElementById("adultos").textContent);
+    const ninos = parseInt(document.getElementById("ninos").textContent);
+    const bebes = parseInt(document.getElementById("bebes").textContent);
+    const totalPasajeros = adultos + ninos + bebes;
+
+    if (!origen || !destino || !fechaSalida) {
+      alert("Por favor, completa origen, destino y fecha de salida.");
+      return;
+    }
+
+    // Guardamos en localStorage
+    localStorage.setItem("origen", origen);
+    localStorage.setItem("destino", destino);
+    localStorage.setItem("fechaSalida", fechaSalida);
+    localStorage.setItem("adultos", adultos);
+    localStorage.setItem("ninos", ninos);
+    localStorage.setItem("bebes", bebes);
+    localStorage.setItem("totalPasajeros", totalPasajeros);
+
+    // Ir a página de asientos
+    window.location.href = "../paginasterc/Asientos.html";
+  });
+</script>
+
+</body>
+</html>

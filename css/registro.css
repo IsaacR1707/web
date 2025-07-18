@@ -1,0 +1,173 @@
+/* =======================
+   CONTENEDOR PRINCIPAL
+======================= */
+.contenedor-registro {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+  gap: 30px;
+  font-family: Arial, sans-serif;
+}
+
+/* =======================
+   FORMULARIO IZQUIERDA
+======================= */
+.formulario {
+  flex: 1;
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+  margin: 0;
+}
+
+.subtitulo {
+  font-size: 12px;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.form-group input,
+.form-group select {
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  flex: 1;
+  min-width: 220px;
+}
+
+.info-box {
+  background: #f0f6ff;
+  padding: 10px;
+  font-size: 13px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+/* =======================
+   RESUMEN DERECHA
+======================= */
+.resumen {
+  flex: 1;
+  max-width: 500px;
+  min-width: 360px;
+}
+
+
+.resumen h2 {
+  font-size: 20px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.detalle-viaje p {
+  font-size: 14px;
+  margin: 3px 0;
+}
+
+.fecha {
+  font-size: 12px;
+  background: #eee;
+  padding: 2px 8px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.flecha {
+  text-align: center;
+  font-size: 22px;
+  margin: 10px 0;
+  color: #000;
+}
+
+.total {
+  margin: 15px 0;
+  font-size: 18px;
+}
+
+.btn-completar {
+  background-color: #0056b3;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-completar:hover {
+  background-color: gray;
+}
+
+/* ====================
+   PASOS DE COMPRA UNIFICADO
+==================== */
+.pasos-compra {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  gap: 30px; /* Espacio entre los pasos */
+}
+
+.pasos-compra .paso {
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+  width: 100px; /* Asegura mismo ancho en todos */
+}
+
+.pasos-compra .numero,
+.pasos-compra .enlace-paso {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #ccc;
+  color: white;
+  margin: auto;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.pasos-compra .paso.datos .numero {
+  background-color: #007BFF;
+}
+
+.pasos-compra .texto {
+  margin-top: 8px;
+  font-size: 13px;
+  color: black;
+}
+
+.icono-bus {
+  width: 20px;
+  height: auto;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 4px;
+  margin-bottom: 2px;
+}
+

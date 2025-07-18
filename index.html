@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/estilos.css">
+  <title>Empresa de Transporte</title>
+</head>
+
+<body>
+  <!-- Encabezado con logo y menú -->
+  <header class="header">
+    <div class="logo">
+      <a href="index.html">
+        <img src="../imagenes.img/logo.jpg" alt="Logo Empresa" width="200" height="42">
+      </a>
+    </div>
+    <nav class="menu">
+      <a href="paginasec/NuestrosServicios.html">Nuestros Servicios</a>
+      <a href="paginasec/Destinos.html">Destinos</a>
+      <a href="paginasec/Encomiendas.html">Encomiendas</a>
+    </nav>
+  </header>
+
+  <!-- Imagen principal con cinta de búsqueda -->
+  <main>
+    <section class="imagen-principal">
+      <div class="contenedor-imagen">
+        <div class="carousel-fade">
+  <div class="slide active" style="background-image: url('../imagenes.img/LOGOGRANDE.png');"></div>
+  <div class="slide" style="background-image: url('../imagenes.img/LOGOGRANDE2.png');"></div>
+  <div class="slide" style="background-image: url('../imagenes.img/LOGOGRANDE3.png');"></div>
+
+  <!-- Flechas -->
+  <div class="flechas-carousel">
+    <button class="prev" onclick="cambiarSlide(-1)">&#x2190;</button>
+    <button class="next" onclick="cambiarSlide(1)">&#x2192;</button>
+  </div>
+
+  <!-- Puntitos -->
+  <div class="puntos-carousel" id="puntosCarousel">
+    <span onclick="irASlide(0)" class="punto active"></span>
+    <span onclick="irASlide(1)" class="punto"></span>
+    <span onclick="irASlide(2)" class="punto"></span>
+  </div>
+
+        <div class="cinta-opciones">
+
+        </div>
+      </div>
+      <div id="marcador-cinta" style="height: 1px;"></div>
+    </section>
+
+    <!-- Descuentos especiales -->
+    <section class="descuentos">
+      <h3>Descuentos especiales</h3>
+      <div class="carrusel-container">
+        <button class="flecha izquierda" onclick="moverCarrusel(-1)">&#x25C0;</button>
+        <div class="carrusel" id="carruselDescuentos">
+          <div class="slide"><img src="../imagenes.img/1.png" alt="Descuento 1"></div>
+          <div class="slide"><img src="../imagenes.img/2.png" alt="Descuento 2"></div>
+          <div class="slide"><img src="../imagenes.img/3.png" alt="Descuento 3"></div>
+          <div class="slide"><img src="../imagenes.img/4.png" alt="Descuento 4"></div>
+          <div class="slide"><img src="../imagenes.img/5.png" alt="Descuento 5"></div>
+          <div class="slide"><img src="../imagenes.img/6.png" alt="Descuento 6"></div>
+        </div>
+        <button class="flecha derecha" onclick="moverCarrusel(1)">&#x25B6;</button>
+      </div>
+    </section>
+
+    <!-- Sección de encomiendas -->
+   <section class="seccion-encomiendas">
+  <div class="imagen-fondo" style="background-image: url('../imagenes.img/ENCOMIENDASLOGOPRINCIPAL.png');">
+    <div class="contenido-lateral">
+      <h2><span class="normal">Envía sobres, paquetes y</span> <br><strong>encomiendas</strong></h2>
+      <p>a más de 50 agencias a nivel nacional todos los días del año de forma fácil y segura.</p>
+      <div class="botones">
+        <button class="btn-transparente">RASTREAR ENVÍO</button>
+        <a href="../principal/paginasec/Encomiendas.html"><button class="btn-transparente">VER MÁS</button></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Sección de servicios -->
+    <section class="seccion-experiencia">
+  <div class="imagen-fondo" style="background-image: url('../imagenes.img/LOGOEXPERIENCIAPRINCIP.png');">
+    <div class="contenido-lateral">
+      <h2><strong>Viaja con la mejor experiencia</strong></h2>
+      <p>Seguridad, confort y puntualidad en cada viaje</p>
+      <div class="iconos">
+        <img src="../imagenes.img/LOGOASIENTOS.png" alt="WiFi">
+        <img src="../imagenes.img/LOGOSOLINVIERNO.png" alt="Maleta">
+        <img src="../imagenes.img/LOGOPANTALLA.png" alt="Ubicación">
+      </div>
+      <div class="botones">
+        <a href="../principal/paginasec/NuestrosServicios.html"><button class="btn-transparente">VER SERVICIO</button></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Sección de destinos -->
+    <section class="destinos-movilbus">
+      <h3>Descubre más destinos</h3>
+      <div class="grid-destinos">
+        <!-- 4 tarjetas -->
+        <div class="card-destino" style="background-image: url('../imagenes.img/coracora.jpg');">
+          <div class="overlay-texto">
+            <p>Descubre la magia de</p>
+            <h2>CoraCora</h2>
+            <span>Pasajes desde:</span>
+            <h3>S/55</h3>
+            <button class="btn-conoce">CONOCE MÁS</button>
+          </div>
+        </div>
+        <div class="card-destino" style="background-image: url('../imagenes.img/lampa.jpg');">
+          <div class="overlay-texto">
+            <p>Descubre la magia de</p>
+            <h2>Lampa</h2>
+            <span>Pasajes desde:</span>
+            <h3>S/90</h3>
+            <button class="btn-conoce">CONOCE MÁS</button>
+          </div>
+        </div>
+        <div class="card-destino" style="background-image: url('../imagenes.img/huamanga.jpg');">
+          <div class="overlay-texto">
+            <p>Descubre la magia de</p>
+            <h2>Huamanga</h2>
+            <span>Pasajes desde:</span>
+            <h3>S/25</h3>
+            <button class="btn-conoce">CONOCE MÁS</button>
+          </div>
+        </div>
+        <div class="card-destino" style="background-image: url('../imagenes.img/puquio.jpg');">
+          <div class="overlay-texto">
+            <p>Descubre la magia de</p>
+            <h2>Puquio</h2>
+            <span>Pasajes desde:</span>
+            <h3>S/80</h3>
+            <button class="btn-conoce">CONOCE MÁS</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cinta de métodos de pago -->
+    <section class="cinta-metodos">
+      <p>Paga tus pasajes con:</p>
+      <div class="logos-pago">
+        <img src="../imagenes.img/VISA.jpg" alt="Visa">
+        <img src="../imagenes.img/MASTERCARD.jpg" alt="MasterCard">
+        <img src="../imagenes.img/YAPE.jpg" alt="Yape">
+        <img src="../imagenes.img/PLIN.jpg" alt="Plin">
+      </div>
+    </section>
+
+  <div id="espacio-cinta" style="height: 0px;"></div>
+
+  <footer>
+    
+    <div class="logo-footer">
+      <img src="../imagenes.img/logo.jpg" alt="Logo Empresa" width="300" height="100">
+      <p>Derechos reservados &copy; 2025</p>
+    </div>
+  </footer>
+<script>
+(function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="LGtO9ymXSrsRJKnBXQGCp";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+</script>
+  <script>
+    const cinta = document.querySelector('.cinta-opciones');
+    const marcador = document.getElementById('marcador-cinta');
+    const espacioCinta = document.getElementById('espacio-cinta');
+    let timeoutId;
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+          clearTimeout(timeoutId);
+          cinta.classList.add('fija');
+          espacioCinta.style.height = `${cinta.offsetHeight}px`;
+        } else {
+          timeoutId = setTimeout(() => {
+            cinta.classList.remove('fija');
+            espacioCinta.style.height = '0px';
+          }, 400);
+        }
+      });
+    }, {
+      root: null,
+      threshold: 1
+    });
+
+    observer.observe(marcador);
+  </script>
+
+  <script>
+    let carrusel = document.getElementById('carruselDescuentos');
+    let index = 0;
+
+    function moverCarrusel(direccion) {
+      const totalSlides = carrusel.children.length;
+      const slidesVisibles = 3;
+      const slideWidth = carrusel.children[0].offsetWidth + 20;
+      const maxIndex = totalSlides;
+
+      index += direccion;
+
+      if (index < 0) {
+        index = totalSlides - slidesVisibles;
+      } else if (index > totalSlides - slidesVisibles) {
+        index = 0;
+      }
+
+      carrusel.style.transform = `translateX(-${index * slideWidth}px)`;
+    }
+  </script>
+<!-- VALIDACIÓN DE FORMULARIOS -->
+<script>
+document.querySelector(".formulario-busqueda").addEventListener("submit", function(e) {
+  const origen = document.getElementById("origen").value;
+  const destino = document.getElementById("destino").value;
+  const salida = document.getElementById("fecha_salida").value;
+
+  if (!origen || !destino || !salida) {
+    e.preventDefault();
+    alert("Por favor, completa origen, destino y fecha de salida.");
+  }
+});
+</script>
+
+<script>
+let slideIndex = 0;
+const slides = document.querySelectorAll(".carousel-fade .slide");
+const puntos = document.querySelectorAll(".punto");
+
+function mostrarSlide(n) {
+  slides.forEach(slide => slide.classList.remove("active"));
+  puntos.forEach(p => p.classList.remove("active"));
+
+  slideIndex = (n + slides.length) % slides.length;
+  slides[slideIndex].classList.add("active");
+  puntos[slideIndex].classList.add("active");
+}
+
+function cambiarSlide(n) {
+  mostrarSlide(slideIndex + n);
+}
+
+function irASlide(n) {
+  mostrarSlide(n);
+}
+
+// Cambio automático (opcional)
+
+</script>
+
+<script>
+  const selector = document.getElementById('pasajeros-btn');
+  const dropdown = document.querySelector('.pasajeros-dropdown');
+
+  selector.addEventListener('click', () => {
+    dropdown.style.display = dropdown.style.display === 'none' ? 'block' : 'none';
+  });
+
+  document.addEventListener('click', function (e) {
+    if (!document.querySelector('.pasajeros-grupo').contains(e.target)) {
+      dropdown.style.display = 'none';
+    }
+  });
+
+  function actualizarContador(tipo, cambio) {
+    const elemento = document.getElementById(tipo);
+    let valor = parseInt(elemento.textContent);
+    valor = Math.max(0, valor + cambio);
+
+    // Limita que siempre haya al menos 1 adulto
+    if (tipo === 'adultos' && valor === 0) return;
+
+    elemento.textContent = valor;
+
+    actualizarResumenPasajeros();
+  }
+
+  function actualizarResumenPasajeros() {
+    const adultos = parseInt(document.getElementById('adultos').textContent);
+    const ninos = parseInt(document.getElementById('ninos').textContent);
+    const bebes = parseInt(document.getElementById('bebes').textContent);
+    const total = adultos + ninos + bebes;
+
+    let label = `${total} pasajero${total > 1 ? 's' : ''}`;
+    selector.textContent = label;
+  }
+
+  // Inicializa
+  actualizarResumenPasajeros();
+</script>
+
+<script>
+  document.querySelector(".formulario-busqueda").addEventListener("submit", function (e) {
+    e.preventDefault(); // Previene envío por defecto del formulario
+
+    const origen = document.getElementById("origen").value;
+    const destino = document.getElementById("destino").value;
+    const fechaSalida = document.getElementById("fecha_salida").value;
+    const adultos = parseInt(document.getElementById("adultos").textContent);
+    const ninos = parseInt(document.getElementById("ninos").textContent);
+    const bebes = parseInt(document.getElementById("bebes").textContent);
+    const totalPasajeros = adultos + ninos + bebes;
+
+    if (!origen || !destino || !fechaSalida) {
+      alert("Por favor, completa origen, destino y fecha de salida.");
+      return;
+    }
+
+    // Guardamos en localStorage
+    localStorage.setItem("origen", origen);
+    localStorage.setItem("destino", destino);
+    localStorage.setItem("fechaSalida", fechaSalida);
+    localStorage.setItem("adultos", adultos);
+    localStorage.setItem("ninos", ninos);
+    localStorage.setItem("bebes", bebes);
+    localStorage.setItem("totalPasajeros", totalPasajeros);
+
+    // Ir a página de asientos
+    window.location.href = "../principal/paginasterc/Asientos.html";
+  });
+</script>
+
+
+
+</body>
+
+</html>

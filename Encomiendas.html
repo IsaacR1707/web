@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encomiendas</title>
+    <link rel="stylesheet" href="../../css/estilos.css">
+    <link rel="stylesheet" href="../../css/encomiendas.css">
+</head>
+<body>
+    <!-- Header -->
+  <header class="header">
+    <div class="logo">
+      <a href="../index.html">
+        <img src="../../imagenes.img/logo.jpg" alt="Logo Empresa" width="200" height="42">
+      </a>
+    </div>
+    <nav class="menu">
+      <a href="NuestrosServicios.html">Nuestros Servicios</a>
+      <a href="Destinos.html">Destinos</a>
+      <a href="Encomiendas.html">Encomiendas</a>
+
+    </nav>
+  </header>
+
+  <!-- Imagen principal + cinta de compra tu pasaje -->
+  <main>
+    <section class="imagen-principal">
+      <div class="contenedor-imagen">
+        <img id="imagenpa" src="../../imagenes.img/LOGOGRANDEENCOMIENDAS.png" alt="Imagen Encomiendas">
+        
+         
+        </div>
+      </div>
+      <div id="marcador-cinta" style="height: 1px;"></div>
+    </section>
+  </main>
+
+  <!-- HTML: Carrusel de Encomiendas -->
+<section class="porque-elegirnos">
+  <div class="titulo-con-flechas">
+    <h3>¿Por qué elegirnos?</h3>
+    <div class="flechas">
+      <button onclick="moverElegirnos(-1)">&#9664;</button>
+      <button onclick="moverElegirnos(1)">&#9654;</button>
+    </div>
+  </div>
+
+  <div class="carrusel-elegirnos-container">
+    <div class="carrusel-elegirnos" id="carruselElegirnos">
+      <div class="item-elegirnos">
+        <img src="../../imagenes.img/minipaquete.png" alt="Servicio 1">
+        <h4>Estándar A1 con tarifas competitivas.</h4>
+        <p>Asistencia personalizada para tus envíos.</p>
+      </div>
+      <div class="item-elegirnos">
+        <img src="../../imagenes.img/minipaquete.png" alt="Servicio 2">
+        <h4>Cobertura a nivel nacional.</h4>
+        <p>Operamos los 365 días con rutas eficientes.</p>
+      </div>
+      <div class="item-elegirnos">
+        <img src="../../imagenes.img/minipaquete.png" alt="Servicio 3">
+        <h4>Monitoreo 24/7.</h4>
+        <p>Control total de tu encomienda en tiempo real.</p>
+      </div>
+      <div class="item-elegirnos">
+        <img src="../../imagenes.img/minipaquete.png" alt="Servicio 4">
+        <h4>Aplicativo móvil.</h4>
+        <p>Rastrea y gestiona tus envíos desde tu celular.</p>
+      </div>
+      <div class="item-elegirnos">
+        <img src="../../imagenes.img/minipaquete.png" alt="Servicio 5">
+        <h4>Atención al cliente especializada.</h4>
+        <p>Siempre listos para resolver tus dudas.</p>
+      </div>
+      <div class="item-elegirnos">
+        <img src="../../imagenes.img/minipaquete.png" alt="Servicio 6">
+        <h4>Entregas puntuales.</h4>
+        <p>Comprometidos con la puntualidad.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="botones-tabs">
+  <button class="tab activo" id="btn-servicios" onclick="mostrarContenido('servicios')">SERVICIOS</button>
+  <button class="tab" id="btn-flota" onclick="mostrarContenido('flota')">FLOTA</button>
+</section>
+
+<!-- CONTENIDO: SERVICIOS -->
+<section id="contenido-servicios" class="contenido-activo">
+  <div class="servicio-box">
+    <div class="imagen-servicio">
+      <img src="../../imagenes.img/destinos1.jpg" alt="Sobre y paquetes">
+    </div>
+    <div class="info-servicio">
+      <h4>Sobre y paquetes</h4>
+      <p>Contamos con el mejor servicio de envío de encomiendas a nivel nacional, conectando a más de 50 destinos con la mejor tecnología, infraestructura y material humano, que garantizan la rapidez, el cuidado y la seguridad de tus sobres y paquetes.</p>
+      <button class="btn-escribenos">ESCRÍBENOS</button>
+    </div>
+  </div>
+
+  <!-- SEGUNDO SERVICIO: Carga personalizada -->
+<div class="servicio-box">
+  <div class="info-servicio">
+    <h4>Carga personalizada</h4>
+    <p>
+      Servicio exclusivo de carga personalizada, enfocada en simplificar el proceso logístico del cliente.
+      Contamos con los mejores equipos para trasladar cargas voluminosas, productos industriales, mudanzas, entre otros.<br><br>
+      Nuestros altos estándares de calidad garantizan el traslado de tu mercancía de forma segura y eficiente.
+    </p>
+    <button class="btn-escribenos">ESCRÍBENOS</button>
+  </div>
+  <div class="imagen-servicio">
+    <img src="../../imagenes.img/destinos1.jpg" alt="Carga personalizada">
+  </div>
+</div>
+</section>
+
+
+
+<!-- CONTENIDO: FLOTA (aún oculto, se llenará después) -->
+<section id="contenido-flota" class="contenido-oculto">
+
+  <!-- Primera tarjeta de flota -->
+  <div class="flota-box">
+    <div class="flota-img">
+      <img src="../imagenes.img/flota-furgon.jpg" alt="Furgón de carga">
+    </div>
+    <div class="flota-info">
+      <h4>Furgones Tipo RC 05TN 40M3</h4>
+      <p>
+        Vehículos de 5 TN y 20 M3, perfecto para su necesidad logística, posee una carrocería moderna y ligera ideal para el transporte de mercancía.
+      </p>
+      <button class="btn-cotizar">COTIZAR</button>
+    </div>
+  </div>
+
+  <!-- Puedes agregar más tarjetas similares aquí si deseas -->
+
+  <div class="servicio-box">
+  <div class="info-servicio">
+    <h4>Furgones Tipo C 10TN 40M3</h4>
+    <p>
+      Pueden trasladar contenedores de 20 y 40 pies donde puede transportar mercadería de mayor volumen y peso.
+    </p>
+    <button class="btn-escribenos">COTIZAR</button>
+  </div>
+  <div class="imagen-servicio">
+    <img src="../../imagenes.img/flota3.jpg" alt="Furgones Tipo C 10TN 40M3">
+  </div>
+</div>
+
+<div class="servicio-box">
+  <div class="imagen-servicio">
+    <img src="../../imagenes.img/flota4.jpg" alt="Camiones Tipo C 15TN 60M3">
+  </div>
+  <div class="info-servicio">
+    <h4>Camiones Tipo C 15TN 60M3</h4>
+    <p>
+      Nuestras unidades tipo C cuentan con capacidad de hasta 15 TN y 60 M3, diseñadas para transportar mercadería de gran volumen.
+    </p>
+    <button class="btn-escribenos">COTIZAR</button>
+  </div>
+</div>
+
+
+
+
+</section>
+
+
+  <!-- Métodos de pago -->
+  <section class="cinta-metodos">
+    <p>Paga tus pasajes con:</p>
+    <div class="logos-pago">
+      <img src="../../imagenes.img/VISA.jpg" alt="Visa">
+      <img src="../../imagenes.img/MASTERCARD.jpg" alt="MasterCard">
+      <img src="../../imagenes.img/YAPE.jpg" alt="Yape">
+      <img src="../../imagenes.img/PLIN.jpg" alt="Plin">
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="logo-footer">
+      <img src="../../imagenes.img/logo.jpg" alt="Logo Empresa" width="300" height="100">
+      <p>Derechos reservados &copy; 2025</p>
+    </div>
+  </footer>
+
+  <script>
+(function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="LGtO9ymXSrsRJKnBXQGCp";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+</script>
+  <!-- Script para hacer flotante la cinta -->
+  <script>
+    const cinta = document.querySelector('.cinta-opciones');
+    const marcador = document.getElementById('marcador-cinta');
+    const espacioCinta = document.getElementById('espacio-cinta');
+    let timeoutId;
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+          clearTimeout(timeoutId);
+          cinta.classList.add('fija');
+          espacioCinta.style.height = `${cinta.offsetHeight}px`;
+        } else {
+          timeoutId = setTimeout(() => {
+            cinta.classList.remove('fija');
+            espacioCinta.style.height = '0px';
+          }, 400);
+        }
+      });
+    }, { threshold: 1 });
+
+    observer.observe(marcador);
+    
+  </script>
+
+  <script>
+  let posicionElegirnos = 0;
+  const carruselElegirnos = document.getElementById('carruselElegirnos');
+  const totalItems = carruselElegirnos.children.length;
+  const itemsPorVista = 3;
+
+  function moverElegirnos(direccion) {
+    posicionElegirnos += direccion;
+
+    if (posicionElegirnos < 0) {
+      posicionElegirnos = totalItems - itemsPorVista;
+    } else if (posicionElegirnos > totalItems - itemsPorVista) {
+      posicionElegirnos = 0;
+    }
+
+    const anchoItem = carruselElegirnos.children[0].offsetWidth + 24; // 1.5rem de gap
+    carruselElegirnos.style.transform = `translateX(-${posicionElegirnos * anchoItem}px)`;
+  }
+</script>
+
+<script>
+  function mostrarContenido(tab) {
+    const btnServicios = document.getElementById("btn-servicios");
+    const btnFlota = document.getElementById("btn-flota");
+    const contenidoServicios = document.getElementById("contenido-servicios");
+    const contenidoFlota = document.getElementById("contenido-flota");
+
+    if (tab === "servicios") {
+      btnServicios.classList.add("activo");
+      btnFlota.classList.remove("activo");
+      contenidoServicios.classList.add("contenido-activo");
+      contenidoServicios.classList.remove("contenido-oculto");
+      contenidoFlota.classList.add("contenido-oculto");
+    } else {
+      btnFlota.classList.add("activo");
+      btnServicios.classList.remove("activo");
+      contenidoFlota.classList.add("contenido-activo");
+      contenidoFlota.classList.remove("contenido-oculto");
+      contenidoServicios.classList.add("contenido-oculto");
+    }
+  }
+</script>
+
+<script>
+  const selector = document.getElementById('pasajeros-btn');
+  const dropdown = document.querySelector('.pasajeros-dropdown');
+
+  selector.addEventListener('click', () => {
+    dropdown.style.display = dropdown.style.display === 'none' ? 'block' : 'none';
+  });
+
+  document.addEventListener('click', function (e) {
+    if (!document.querySelector('.pasajeros-grupo').contains(e.target)) {
+      dropdown.style.display = 'none';
+    }
+  });
+
+  function actualizarContador(tipo, cambio) {
+    const elemento = document.getElementById(tipo);
+    let valor = parseInt(elemento.textContent);
+    valor = Math.max(0, valor + cambio);
+
+    // Limita que siempre haya al menos 1 adulto
+    if (tipo === 'adultos' && valor === 0) return;
+
+    elemento.textContent = valor;
+
+    actualizarResumenPasajeros();
+  }
+
+  function actualizarResumenPasajeros() {
+    const adultos = parseInt(document.getElementById('adultos').textContent);
+    const ninos = parseInt(document.getElementById('ninos').textContent);
+    const bebes = parseInt(document.getElementById('bebes').textContent);
+    const total = adultos + ninos + bebes;
+
+    let label = `${total} pasajero${total > 1 ? 's' : ''}`;
+    selector.textContent = label;
+  }
+
+  // Inicializa
+  actualizarResumenPasajeros();
+</script>
+
+
+<script>
+  document.querySelector(".formulario-busqueda").addEventListener("submit", function (e) {
+    e.preventDefault(); // Previene envío por defecto del formulario
+
+    const origen = document.getElementById("origen").value;
+    const destino = document.getElementById("destino").value;
+    const fechaSalida = document.getElementById("fecha_salida").value;
+    const adultos = parseInt(document.getElementById("adultos").textContent);
+    const ninos = parseInt(document.getElementById("ninos").textContent);
+    const bebes = parseInt(document.getElementById("bebes").textContent);
+    const totalPasajeros = adultos + ninos + bebes;
+
+    if (!origen || !destino || !fechaSalida) {
+      alert("Por favor, completa origen, destino y fecha de salida.");
+      return;
+    }
+
+    // Guardamos en localStorage
+    localStorage.setItem("origen", origen);
+    localStorage.setItem("destino", destino);
+    localStorage.setItem("fechaSalida", fechaSalida);
+    localStorage.setItem("adultos", adultos);
+    localStorage.setItem("ninos", ninos);
+    localStorage.setItem("bebes", bebes);
+    localStorage.setItem("totalPasajeros", totalPasajeros);
+
+    // Ir a página de asientos
+    window.location.href = "../paginasterc/Asientos.html";
+  });
+</script>
+
+<style>
+/* Auxiliares */
+.contenido-activo {
+  display: block;
+}
+
+.contenido-oculto {
+  display: none;
+}
+</style>
+
+    
+</body>
+</html>

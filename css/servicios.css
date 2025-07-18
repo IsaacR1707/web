@@ -1,0 +1,115 @@
+.servicios-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Dos columnas fijas */
+  gap: 40px;
+  padding: 60px;
+  justify-items: center;
+}
+
+.tarjeta-servicio {
+  width: 100%;
+  max-width: 600px;
+  height: 360px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  color: white;
+  display: flex;
+  align-items: flex-end;
+  transition: transform 0.3s ease;
+}
+
+.tarjeta-servicio:hover {
+  transform: scale(1.03);
+}
+
+.contenido {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75), transparent);
+  padding: 20px;
+  width: 100%;
+}
+
+.contenido p {
+  margin: 0;
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+.contenido h2 {
+  margin: 5px 0 10px;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.iconos {
+  display: flex;
+  gap: 15px;
+  margin: 10px 0 20px;
+}
+
+.iconos img {
+  width: 32px;
+  height: 32px;
+  filter: invert(1);
+}
+
+.btn-servicio {
+  display: inline-block;
+  border: 2px solid white;
+  padding: 8px 18px;
+  border-radius: 25px;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.btn-servicio:hover {
+  background-color: #007BFF;
+  border-color: #007BFF;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .servicio-box, .flota-box {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .carrusel-elegirnos {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 1rem;
+  }
+
+  .item-elegirnos {
+    min-width: 80%;
+  }
+
+  .contenedor-destinos {
+    flex-direction: column;
+  }
+
+  .filtro-destinos {
+    width: 100%;
+    order: 2;
+  }
+
+  .grid-destinos {
+    order: 1;
+  }
+
+  .cinta-opciones {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .grupo-campo {
+    width: 100%;
+  }
+}
+
+
